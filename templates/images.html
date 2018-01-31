@@ -12,7 +12,21 @@
 	<div class="count">
 		{{image_count}}/{{number_of_images}}
 	</div>
+
+<div id="splash">
 	<img src="{{image_url}}" alt="?">
+	</div>
+<script>
+  function timer(){
+      timerId = setTimeout(vanishImage, 1000);
+  }
+  function vanishImage() {
+      document.getElementById("splash").style.display = "none";
+      clearTimeout(timerId);
+  }
+document.body.onload=timer;
+</script>
+
 	<div class="button-container">
 		<div class="button-row">
 			<button type="button" onclick="predict(true)">(R)eal</button>
