@@ -10,25 +10,26 @@
 
 <body>
 	<div class="intro">
-		<h1>The GAN Turing Test</h1>
+		<h1>敵対的生成ネットワークによる食事画像の任意ドメイン変換</h1>
 		<p>
-			Thank you for participating in the GAN turing test. The goal of this test is to quantify how realistic synthesized GAN images are. To do so, this website will show you {{sample_size}} real and {{sample_size}} fake (synthesized) images. It is your task
-			to decide for each whether that image is real or fake. At the end of the experiment, you will see your personal score at this prediction task. Please record your score (e.g. take a screenshot) and report it to the curator of this experiment.
+GANチューリングテストに参加していただきありがとうございます。 このテストの目的は、現実的な合成されたGAN画像がどの程度現実的であるかを定量化することです。 これを行うには、このウェブサイトで{{sample_size}}と{{sample_size}}の擬似（合成）画像が表示されます。 そのイメージが真実か偽であるかをそれぞれ決定するのはあなたの仕事です。 実験の最後に、この予測タスクであなたの個人的なスコアが表示されます。 スコアを記録し（例：スクリーンショットを撮ります）、この実験のキュレーターに報告してください。
+
+			敵対的ネットワーク(GAN)を用いた画像生成・変換の評価実験に協力していただきありがとうございます．この実験の目的は，GANにより生成・変換された画像がどの程度，本物に近いかを定量化することです．本Web実験ページでは，{{sample_size}}と{{sample_size}}の生成・変換された画像が表示されます．実験の最後には，この予測タスクであたなの個人的なスコアが表示されますので，スコアを記録し，丹野まで報告してください．
 		</p>
 	</div>
 	<div class="examples">
-    <h2>Examples</h2>
-		<p>To give you an idea of what you will be looking at, here is a selection of {{real_examples | length}} real and {{fake_examples | length}} fake images.</p>
+    <h2>例</h2>
+		<p>下に表示される画像を見てください．{{real_examples | length}}枚の本物の画像と{{fake_examples | length}}枚の偽物の画像が表示されています．次ページから1秒間だけ画像をお見せしますので，本物(Real)か偽物(Fake)かを判断してください．</p>
 		<div class="images-container">
 			<div class="images-row">
 				{% for image in real_examples %}
 				<img src="{{url_for('static', filename=image)}}" alt="?"> {% endfor %}
-				<h3>Real Examples</h3>
+				<h3>本物の画像例</h3>
 			</div>
 			<div class="images-row">
 				{% for image in fake_examples %}
 				<img src="{{url_for('static', filename=image)}}" alt="?"> {% endfor %}
-				<h3>Fake Examples</h3>
+				<h3>偽物の画像例</h3>
 			</div>
 		</div>
 	</div>
