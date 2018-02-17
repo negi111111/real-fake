@@ -15,6 +15,6 @@
 >"data/fake/49.png": false,
 >"data/fake/50.png": false,
 >}
-![s1](https://github.com/negi111111/real-fake/images/s1.png)
-![s2](https://github.com/negi111111/real-fake/images/s2.png)
-![s3](https://github.com/negi111111/real-fake/images/s3.png)
+![s1](https://github.com/negi111111/real-fake/blob/master/images/s1.png)
+![s2](https://github.com/negi111111/real-fake/blob/master/images/s2.png)
+![s3](https://github.com/negi111111/real-fake/blob/master/images/s3.png)
